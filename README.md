@@ -28,9 +28,10 @@
 大礼包请安装：https://github.com/K-Dense-AI/scientific-agent-skills
 ```
 
-> ⚠️ 以下两个 Skill 需要安装配套客户端/网关程序，**建议手动安装**，详见下方说明：
-> - **ChatMem**（桌面客户端）→ 见 #17
-> - **OneFind**（网关程序）→ 见 #19
+> ⚠️ 以下三个 Skill 依赖较重或需要配套客户端，**建议独立安装**，详见下方说明：
+> - **paper-fetch-skill**（Python 3.11+ + 浏览器后端）→ 见 #9
+> - **ChatMem**（桌面客户端）→ 见 #18
+> - **OneFind**（网关程序）→ 见 #20
 
 ## 📽️ PPT 专题（6 个 Skill 单独安装）
 
@@ -72,21 +73,22 @@ PPT 相关 Skill 单独列出，按需选用。复制以下内容发给 AI Agent
 6. https://github.com/Rimagination/good-story
 7. https://github.com/keros68/abstract-fig
 8. https://github.com/Rimagination/instsci
-9. https://github.com/op7418/Humanizer-zh
-10. https://github.com/Fokkyp/SoftwareCopyright-Skill
-11. https://github.com/aduhappy/multi-agent-project-skill
-12. https://github.com/sadassimov/geemu-skill
+9. https://github.com/Dictation354/paper-fetch-skill
+10. https://github.com/op7418/Humanizer-zh
+11. https://github.com/Fokkyp/SoftwareCopyright-Skill
+12. https://github.com/aduhappy/multi-agent-project-skill
+13. https://github.com/sadassimov/geemu-skill
 
 PPT 专题：
-13. https://github.com/op7418/guizang-ppt-skill
-14. https://github.com/GordenSun/GordenPPTSkill
-15. https://github.com/lewislulu/html-ppt-skill
-16. https://github.com/hugohe3/ppt-master
-17. https://github.com/zarazhangrui/frontend-slides
-18. https://github.com/zarazhangrui/beautiful-html-templates
+14. https://github.com/op7418/guizang-ppt-skill
+15. https://github.com/GordenSun/GordenPPTSkill
+16. https://github.com/lewislulu/html-ppt-skill
+17. https://github.com/hugohe3/ppt-master
+18. https://github.com/zarazhangrui/frontend-slides
+19. https://github.com/zarazhangrui/beautiful-html-templates
 
 大礼包：
-19. https://github.com/K-Dense-AI/scientific-agent-skills
+20. https://github.com/K-Dense-AI/scientific-agent-skills
 
 如果发现某个 Skill 有更新，显示具体差异（commit hash 或关键变更），并询问我是否要更新。
 ```
@@ -199,9 +201,30 @@ Nature 级学术表达与绘图。润色为顶刊风格语言，辅助编写符�
 注意：需要 git clone 后 pip install -e . 安装 Python 包，AI 使用需启动 MCP 服务器（instsci-mcp）
 ```
 
+#### 9. paper-fetch-skill — 论文全文获取（CLI + MCP + Skill）⚠️ 建议独立安装
+
+论文全文获取工具（CLI + MCP + Skill 三合一）。输入 DOI/URL/标题，返回结构化元数据 + 干净的 Markdown 全文 + 本地缓存的图片资源。支持 18 家出版社（arXiv/Elsevier/Springer/Wiley/Science/PNAS/IEEE/ACS/IOP/AIP 等），部分出版社通过 CDP 浏览器后端获取。**不绕过付费墙**，仅在你已有访问权限时工作。
+
+> **⚠️ 独立安装说明（依赖较重）**
+> - 必需 Python **>= 3.11**，依赖 playwright、PyMuPDF、cloakbrowser 等较重包
+> - 推荐用离线安装包：[GitHub Releases](https://github.com/Dictation354/paper-fetch-skill/releases)（Windows `.exe` / Linux `.sh` / macOS `.tar.gz`）
+> - 或从源码：`./install.sh`（创建 .venv 并安装外部后端），精简版用 `./install.sh --lite`
+> - 配置文件：`~/.config/paper-fetch/.env`（含 ELSEVIER_API_KEY、WILEY_TDM_CLIENT_TOKEN、CROSSREF_MAILTO 等）
+> - MCP 模式：运行 `paper-fetch-mcp`，或用 `scripts/install-codex-skill.sh --register-mcp` / `install-claude-skill.sh --register-mcp` 自动注册
+> - 仅限个人学术学习用途，禁止转载获取的内容
+
+```
+⚠️ 此 Skill 依赖较重，建议独立安装：
+1. 下载离线安装包：https://github.com/Dictation354/paper-fetch-skill/releases
+   或从源码：git clone 后运行 ./install.sh
+2. 配置 ~/.config/paper-fetch/.env（按需填入 ELSEVIER_API_KEY 等）
+3. MCP 模式：运行 paper-fetch-mcp，或用 scripts/install-codex-skill.sh --register-mcp 自动注册
+4. 重启 AI Agent 使 MCP 配置生效
+```
+
 ### ✍️ 文本润色与去 AI 痕迹
 
-#### 9. humanizer-zh — 中文去 AI 痕迹
+#### 10. humanizer-zh — 中文去 AI 痕迹
 
 中文 AI 写作去痕。识别并消除"AI 套话"，让表达更符合真实人类中文书写习惯。识别 4 大类 24 种 AI 写作模式。
 
@@ -214,7 +237,7 @@ Nature 级学术表达与绘图。润色为顶刊风格语言，辅助编写符�
 
 ### 🔧 开发辅助与知识产权
 
-#### 10. software-copyright-materials — 软件著作权自动生成
+#### 11. software-copyright-materials — 软件著作权自动生成
 
 软件著作权自动生成。一键抽取前后 30 页代码，生成软著申请说明书和操作手册。**完全免费**。
 
@@ -229,7 +252,7 @@ Nature 级学术表达与绘图。润色为顶刊风格语言，辅助编写符�
 
 ### 📽️ PPT 制作与演示
 
-#### 11. guizang-ppt-skill — 设计感网页 PPT
+#### 12. guizang-ppt-skill — 设计感网页 PPT
 
 设计感网页 PPT 生成。提供 Editorial 杂志风（10 种版式）和瑞士国际主义（22 种版式）两种视觉系统，单文件 HTML 输出。支持多平台社交封面、可选图像生成（Codex 专属功能）。
 
@@ -241,7 +264,7 @@ Nature 级学术表达与绘图。润色为顶刊风格语言，辅助编写符�
 请帮我安装 skill：https://github.com/op7418/guizang-ppt-skill
 ```
 
-#### 12. GordenPPTSkill — 中文 PPT 模板填充
+#### 13. GordenPPTSkill — 中文 PPT 模板填充
 
 中文 PPT 模板填充。内置 17 套精调中文商务 PPTX 模板，非破坏性文本编辑（布局不变）。支持 DeepSeek、Claude、GPT 等多种 LLM。
 
@@ -255,7 +278,7 @@ Nature 级学术表达与绘图。润色为顶刊风格语言，辅助编写符�
 注意：需要先安装 python-pptx（pip install python-pptx）
 ```
 
-#### 13. html-ppt-skill — HTML 演示文稿工厂
+#### 14. html-ppt-skill — HTML 演示文稿工厂
 
 HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果，纯静态 HTML/CSS/JS（无构建步骤）。独创演讲者模式（Presenter Mode）：S 键打开双屏，含逐字稿和计时器。
 
@@ -263,7 +286,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 请帮我安装 skill：https://github.com/lewislulu/html-ppt-skill
 ```
 
-#### 14. ppt-master — 可编辑 PPTX 生成
+#### 15. ppt-master — 可编辑 PPTX 生成
 
 可编辑 PPTX 生成。将 PDF/DOCX/Markdown 等源文档转为原生可编辑的 PPTX（DrawingML 格式，可在 PowerPoint 中直接修改）。支持动画、幻灯片备注、模板填充模式。
 
@@ -277,7 +300,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 注意：需要 Python 3.10+ 并安装依赖（pip install -r requirements.txt）
 ```
 
-#### 15. frontend-slides — 前端幻灯片预览
+#### 16. frontend-slides — 前端幻灯片预览
 
 前端幻灯片预览。先看视觉预览再选择风格，降低设计决策门槛。支持从 PPTX 导入、12 种内置预设 + 34 种 Bold 模板包、Vercel 一键部署。
 
@@ -290,7 +313,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 请帮我安装 skill：https://github.com/zarazhangrui/frontend-slides
 ```
 
-#### 16. beautiful-html-templates — HTML 模板库
+#### 17. beautiful-html-templates — HTML 模板库
 
 高质量 HTML 幻灯片模板库。34 套成品 HTML 模板，附 screenshots 预览和 index.json 目录，Agent 可自动匹配用户需求并克隆改编。常与 frontend-slides 配合使用。
 
@@ -304,7 +327,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 
 ### 🤖 多智能体协作与项目管理
 
-#### 17. multi-agent-project-skill — 跨 Agent 协作文档脚手架
+#### 18. multi-agent-project-skill — 跨 Agent 协作文档脚手架
 
 跨 Agent、跨工具的可恢复项目文档脚手架。基于 AGENTS.md 开放标准（agents.md），生成纯 Markdown 协作结构：AGENTS.md + 任务卡片 + 数据来源溯源 + 决策记录（ADR）+ 进度日志 + STATUS.md 状态移交。任何 Agent（Claude/Cursor/Gemini/ZCode/Codex）读取同一入口即可接力工作。
 
@@ -319,7 +342,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 
 ### 💾 对话增强与记忆 ⚠️ 建议手动安装
 
-#### 18. chatmem — 智能体长短期记忆
+#### 19. chatmem — 智能体长短期记忆
 
 智能体长短期记忆。结构化后台记忆库，解决超长项目和连贯工作中的上下文断层问题。
 
@@ -338,7 +361,7 @@ HTML 演示文稿工厂。36 种主题、31 种页面版式、47 种动画效果
 
 ### 🌍 地理与遥感
 
-#### 19. geemu-skill — GEE / geemap 工作流
+#### 20. geemu-skill — GEE / geemap 工作流
 
 GEE / geemap 工作流。Google Earth Engine 遥感脚本、影像处理、数据导出。
 
@@ -353,7 +376,7 @@ GEE / geemap 工作流。Google Earth Engine 遥感脚本、影像处理、数�
 
 ### 🔍 本地知识库检索 ⚠️ 建议手动安装
 
-#### 20. onefind — 本地知识库优先检索
+#### 21. onefind — 本地知识库优先检索
 
 本地知识库优先检索。支持 Obsidian / Zotero / EndNote / Notion / Mendeley / Citavi 多源统一检索。
 
