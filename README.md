@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 快速安装指令（18 个可自动安装）
+## 🚀 快速安装指令（12 个可自动安装）
 
 把以下内容发给你的 AI Agent 即可一键安装这些 Skill：
 
@@ -22,21 +22,39 @@
 8. 学术论文MCP检索：https://github.com/Rimagination/instsci
 9. 中文去AI痕迹：https://github.com/op7418/Humanizer-zh
 10. 软件著作权自动生成：https://github.com/Fokkyp/SoftwareCopyright-Skill
-11. 设计感PPT生成：https://github.com/op7418/guizang-ppt-skill
-12. 中文PPT模板填充：https://github.com/GordenSun/GordenPPTSkill
-13. HTML演示文稿：https://github.com/lewislulu/html-ppt-skill
-14. 可编辑PPTX生成：https://github.com/hugohe3/ppt-master
-15. 前端幻灯片预览：https://github.com/zarazhangrui/frontend-slides
-16. HTML模板库：https://github.com/zarazhangrui/beautiful-html-templates
-17. 多智能体协作文档：https://github.com/aduhappy/multi-agent-project-skill
-18. GEE/geemap 工作流：https://github.com/sadassimov/geemu-skill
+11. 多智能体协作文档：https://github.com/aduhappy/multi-agent-project-skill
+12. GEE/geemap 工作流：https://github.com/sadassimov/geemu-skill
 
 大礼包请安装：https://github.com/K-Dense-AI/scientific-agent-skills
 ```
 
 > ⚠️ 以下两个 Skill 需要安装配套客户端/网关程序，**建议手动安装**，详见下方说明：
-> - **ChatMem**（桌面客户端）→ 见 #18
-> - **OneFind**（网关程序）→ 见 #20
+> - **ChatMem**（桌面客户端）→ 见 #17
+> - **OneFind**（网关程序）→ 见 #19
+
+## 📽️ PPT 专题（6 个 Skill 单独安装）
+
+PPT 相关 Skill 单独列出，按需选用。复制以下内容发给 AI Agent 安装：
+
+```
+请帮我安装以下 PPT 制作相关的 AI Agent Skill：
+
+1. 设计感PPT生成：https://github.com/op7418/guizang-ppt-skill
+2. 中文PPT模板填充：https://github.com/GordenSun/GordenPPTSkill
+3. HTML演示文稿：https://github.com/lewislulu/html-ppt-skill
+4. 可编辑PPTX生成：https://github.com/hugohe3/ppt-master
+5. 前端幻灯片预览：https://github.com/zarazhangrui/frontend-slides
+6. HTML模板库：https://github.com/zarazhangrui/beautiful-html-templates
+```
+
+| Skill | 输出格式 | 适用场景 | 特色 |
+|-------|---------|---------|------|
+| **guizang-ppt-skill** | HTML | 设计感网页演示 | Editorial 杂志风 + 瑞士国际主义 |
+| **GordenPPTSkill** | PPTX | 中文商务模板 | 17 套精调模板，非破坏性文本填充 |
+| **html-ppt-skill** | HTML | 技术分享/动画交互 | 36 主题 + 47 动画 + 演讲者双屏 |
+| **ppt-master** | PPTX | 源文档转 PPT | PDF/DOCX/MD → 原生可编辑 PPTX |
+| **frontend-slides** | HTML | 风格预览选择 | 先看视觉预览再决定风格 |
+| **beautiful-html-templates** | HTML | 模板库 | 34 套成品模板，常配 #5 使用 |
 
 ## 🔄 检查本地已安装 Skill 是否有更新
 
@@ -56,14 +74,16 @@
 8. https://github.com/Rimagination/instsci
 9. https://github.com/op7418/Humanizer-zh
 10. https://github.com/Fokkyp/SoftwareCopyright-Skill
-11. https://github.com/op7418/guizang-ppt-skill
-12. https://github.com/GordenSun/GordenPPTSkill
-13. https://github.com/lewislulu/html-ppt-skill
-14. https://github.com/hugohe3/ppt-master
-15. https://github.com/zarazhangrui/frontend-slides
-16. https://github.com/zarazhangrui/beautiful-html-templates
-17. https://github.com/aduhappy/multi-agent-project-skill
-18. https://github.com/sadassimov/geemu-skill
+11. https://github.com/aduhappy/multi-agent-project-skill
+12. https://github.com/sadassimov/geemu-skill
+
+PPT 专题：
+13. https://github.com/op7418/guizang-ppt-skill
+14. https://github.com/GordenSun/GordenPPTSkill
+15. https://github.com/lewislulu/html-ppt-skill
+16. https://github.com/hugohe3/ppt-master
+17. https://github.com/zarazhangrui/frontend-slides
+18. https://github.com/zarazhangrui/beautiful-html-templates
 
 大礼包：
 19. https://github.com/K-Dense-AI/scientific-agent-skills
